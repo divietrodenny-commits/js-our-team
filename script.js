@@ -67,7 +67,11 @@ function createCard(member) {
 
   return col;
 }
+
+
 function renderTeam() {
+  console.log("Array completo:", teamMembers);
+
   teamContainer.innerHTML = "";
   teamMembers.forEach(member => {
     const card = createCard(member);
@@ -75,5 +79,25 @@ function renderTeam() {
   });
 }
 
+/* creo evento per aggiungere una new card */
 renderTeam();
-console.log("Array completo:", teamMembers);
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = nameInput.value.trim();
+  const role = roleInput.value.trim();
+  const email = emailInput.value.trim();
+  const img = imgInput.value.trim() || "img/default.png";
+  console.log("Valori letti dal form:", { name, role, email, img });
+
+  if (!name || !role || !email || !img) return;
+
+  const newMember = { name, role, email, img };
+  console.log("Nuovo membro aggiunto:", newMember);
+
+  teamMembers.push(newMember);
+  console.log("Array dopo push:", teamMembers);
+  renderTeam();
+  form.reset();
+});
