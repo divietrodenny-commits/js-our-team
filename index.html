@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Team aziendale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-    Prova
 
+<body class="bg-light">
 
+    <main class="container py-4">
+        <h1 class="text-center mb-4">Il nostro team</h1>
 
+        <!-- FORM AGGIUNTA MEMBRO -->
+        <form id="add-member-form" class="row g-3 mb-4">
+            <div class="col-md-3">
+                <input type="text" id="name" class="form-control" placeholder="Nome" required>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="role" class="form-control" placeholder="Ruolo" required>
+            </div>
+            <div class="col-md-3">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="img" class="form-control" placeholder="URL immagine" required>
+            </div>
+            <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">
+                    Aggiungi membro
+                </button>
+            </div>
+        </form>
+
+        <!-- GRID CARD TEAM -->
+        <!-- row-cols-* rende la griglia responsive (1 col su mobile, 2 su tablet, 3 su desktop) -->
+        <section id="team-container" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <!-- le card vengono inserite da JS -->
+        </section>
+    </main>
 
 
     <script src="./script.js"></script>
 </body>
+
 </html>

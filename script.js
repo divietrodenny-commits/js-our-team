@@ -36,3 +36,11 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+/* collego le variabili al dom */
+const teamContainer = document.getElementById("team-container");
+const form = document.getElementById("add-member-form");
+const nameInput = document.getElementById("name");
+const roleInput = document.getElementById("role");
+const emailInput = document.getElementById("email");
+const imgInput = document.getElementById("img");

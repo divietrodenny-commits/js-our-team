@@ -14,3 +14,6 @@ Avete a disposizione sia il destructuring, sia la dot notation: verificate quale
 
 |||
 
+creo html con h1, diversi input per nome, ruolo, email e url img. Rendo resposive e sistemo il tutto con bootstrap. Collego i nodi del dom a js, creo una card per un membro e la inserisco in html/stampo.
+Aggiungo membro tramite form (if/return) + log
+
