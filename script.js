@@ -70,7 +70,6 @@ function createCard(member) {
 
 
 function renderTeam() {
-  console.log("Array completo:", teamMembers);
 
   teamContainer.innerHTML = "";
   teamMembers.forEach(member => {
@@ -89,7 +88,6 @@ form.addEventListener("submit", function (event) {
   const role = roleInput.value.trim();
   const email = emailInput.value.trim();
   const img = imgInput.value.trim() || "img/default.png";
-  console.log("Valori letti dal form:", { name, role, email, img });
 
   if (!name || !role || !email || !img) return;
 
