@@ -44,3 +44,36 @@ const nameInput = document.getElementById("name");
 const roleInput = document.getElementById("role");
 const emailInput = document.getElementById("email");
 const imgInput = document.getElementById("img");
+
+/*  creo ed aggiungo card in pagina */
+function createCard(member) {
+  const { name, role, email, img } = member;
+
+  const col = document.createElement("div");
+  col.className = "col";
+
+  col.innerHTML = `
+    <div class="card h-100 shadow-sm">
+      <img src="${img}" class="card-img-top" alt="Foto di ${name}">
+      <div class="card-body">
+        <h5 class="card-title mb-1">${name}</h5>
+        <p class="card-text mb-1">${role}</p>
+        <p class="card-text">
+          <small class="text-muted">${email}</small>
+        </p>
+      </div>
+    </div>
+  `;
+
+  return col;
+}
+function renderTeam() {
+  teamContainer.innerHTML = "";
+  teamMembers.forEach(member => {
+    const card = createCard(member);
+    teamContainer.appendChild(card);
+  });
+}
+
+renderTeam();
+console.log("Array completo:", teamMembers);
